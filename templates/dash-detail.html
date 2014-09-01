@@ -1,0 +1,48 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'firend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view title="{{favoriteContent.name}}">
+    <ion-content has-header="true" padding="true">
+        <div class="card">
+            <div class="item item-body">
+                <img class="full-image" src="img/placeholder.png">
+                <p>
+                    <b>Beskrivelse:</b>{{favoriteContent.comment}}</p>
+
+                <p>
+                    <b>Åbningstider:</b>{{favoriteContent.opening}}
+                </p>
+
+                <p>
+                    <b>Priser:</b>{{favoriteContent.price}}
+                </p>
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left">
+
+
+                <a class="tab-item" href="#">
+                    <i class="button icon-left ion-share button-clear" name="shareButton" ng-click="shareFavorites()">Del</i>
+
+                </a>
+
+
+                <a class="tab-item" href="#">
+                    <i class="button icon-left ion-navigate button-clear" name="navigateButton"
+                       ng-click="navigateToFavorites()">Naviger</i>
+
+                </a>
+
+                <a class="tab-item" href="#">
+                    <i class="button icon-left ion-android-trash button-clear" name="deleteButton"
+                       ng-click="deleteFavorite()">Fjern</i>
+
+                </a>
+            </div>
+            <!-- </div>-->
+        </div>
+    </ion-content>
+</ion-view>

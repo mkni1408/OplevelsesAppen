@@ -1,0 +1,23 @@
+<ion-view title="Favoritter">
+    <!--<ion-nav-buttons side="right">
+        <button class="button ion-funnel" ng-click="modal.show()">
+            Filter
+        </button>-->
+    </ion-nav-buttons>
+    <ion-content has-header="false">
+
+
+        <ion-list>
+            <ion-item ng-repeat="favorite in favoriteList" type="item-text-wrap" href="#/tab/dash/{{favorite.id}}">
+                <i class="icon ion-home"></i>
+                {{favorite.name}}
+                <p> Afstand:{{result.distanceTo}} Kilometer</p>
+            </ion-item>
+        </ion-list>
+        <div class="card" id="nofavoriteresultsdiv">
+            <div class="item item-text-wrap">
+                {{favoritePlaceholder}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view title="Foreslå">
+    <ion-content class="has-header padding">
+        Her kan du foreslå en oplevelse der skal tilføjes til appen. Udfyld felterne nedenfor
+        og tryk send så kigger vi på forslaget og tilføjer det, hvis det er relevant.
+        <div class="card">
+            <label class="item item-input">
+                <input type="text" placeholder="Navn på oplevelse">
+            </label>
+            <label class="item item-input">
+                <textarea placeholder="Beskrivelse"></textarea>
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Addresse">
+            </label>
+            <ion-toggle toggle-class="toggle-assertive"
+                        ng-model="useLocation"
+                        ng-true-value="true"
+                        ng-false-value="false">
+                Brug nuværende position
+            </ion-toggle>
+
+
+            <button class="button button-block button-positive">
+                Send
+            </button>
+
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,23 @@
+<ion-view title="Resultater">
+    <ion-nav-buttons side="right">
+        <button class="button ion-funnel button-stable" ng-click="modal.show()">
+            Søg
+        </button>
+    </ion-nav-buttons>
+    <ion-content has-header="false">
+
+
+        <ion-list>
+            <ion-item ng-repeat="result in searchResults" type="item-text-wrap" href="#/tab/friends/{{result.id}}">
+                <i class="icon ion-home"></i>
+                {{result.name}}
+                <p> Afstand:{{result.distanceTo}} Kilometer</p>
+            </ion-item>
+        </ion-list>
+        <div class="card" id="nosearchresultsdiv">
+            <div class="item item-text-wrap">
+                {{searcPlaceholder}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
